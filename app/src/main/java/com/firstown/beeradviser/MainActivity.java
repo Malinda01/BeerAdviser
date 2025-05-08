@@ -4,6 +4,9 @@ import static android.widget.Toast.makeText;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
 //    New Custom function
     public void clickMeButton(View v) {
-        Toast.makeText(this, "You just clicked the button", Toast.LENGTH_LONG).show();
+        Spinner selectColor = findViewById(R.id.colors);
+        Button btnClick = findViewById(R.id.btnclick);
+        TextView txtRecommendation = findViewById(R.id.recommendBeer);
+        Toast.makeText(this, selectColor.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
     }
+
+
 }
