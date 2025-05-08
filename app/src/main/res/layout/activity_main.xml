@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/colors"
         android:layout_marginTop="350px"
-        android:layout_marginLeft="200px"/>
+        android:layout_marginLeft="200px"
+        android:entries="@array/beerColours"
+        />
 
 <!--    Button -->
     <Button
@@ -24,6 +26,7 @@
         android:layout_below="@+id/colors"
         android:layout_alignLeft="@+id/colors"
         android:layout_marginTop="50px"
+        android:onClick="clickMeButton"
         />
 
     <TextView

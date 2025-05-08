@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Beer Adviser</string>
     <string name = "val_name">This is your string</string>
+
+    <string-array name="beerColours">
+        <item>Amber</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
 </resources>
