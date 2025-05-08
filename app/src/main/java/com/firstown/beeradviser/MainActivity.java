@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,9 +34,19 @@ public class MainActivity extends AppCompatActivity {
 //    New Custom function
     public void clickMeButton(View v) {
         Spinner selectColor = findViewById(R.id.colors);
-        Button btnClick = findViewById(R.id.btnclick);
+//        Button btnClick = findViewById(R.id.btnclick);
         TextView txtRecommendation = findViewById(R.id.recommendBeer);
-        Toast.makeText(this, selectColor.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, selectColor.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
+
+        BeerExpert beerExpert = new BeerExpert();
+        List<String> recommendedBeer = beerExpert.recommendBeer(selectColor.getSelectedItem().toString());
+        StringBuilder finalRecommendations = new StringBuilder();
+
+        for (String beer : recommendedBeer) {
+            finalRecommendations.append(beer+"\n");
+        };
+
+        txtRecommendation.setText(finalRecommendations.toString());
     }
 
 
